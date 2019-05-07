@@ -1,12 +1,30 @@
 import React, { Component } from 'react';
-import Restoran from '../../components/restoran/restoran';
+import resto from '../../util/resto';
+import Cardresto from '../../components/cardresto/cardresto';
 
 class Dashresto extends Component {
-  state = {};
+  state = {
+    base: []
+  };
+
+  componentDidMount() {
+    this.setState({
+      base: resto
+    });
+  }
+
   render() {
     return (
       <div>
-        <Restoran />
+        <div class="row">
+          {this.state.base.map(item => {
+            return (
+              <div class="col-sm-4">
+                <Cardresto item={item} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

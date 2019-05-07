@@ -5,8 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import red from '@material-ui/core/colors/red';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
@@ -54,7 +52,7 @@ function ButtonAppBar(props) {
             />
           </Link>
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            News
+            Go Jek
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
