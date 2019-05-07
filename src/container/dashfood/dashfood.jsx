@@ -130,25 +130,29 @@ class DashFood extends Component {
         </div>
         <center>
           <div style={{ padding: '50px' }}>
-            <Table>
+            <Table dark>
               <thead style={{ backgroundColor: 'blue' }}>
                 <tr>
                   <th style={{ color: 'white' }}>Nama Pesan</th>
                   <th style={{ color: 'white' }}>Jumlah</th>
+                  <th style={{ color: 'white' }}>Harga</th>
                 </tr>
               </thead>
 
               <tbody>
                 {this.state.orderan.map(orders => (
                   <tr>
-                    <td>{orders.nama}</td>
-                    <td>{orders.qty}</td>
+                    <td style={{ color: 'white' }}>{orders.nama}</td>
+                    <td style={{ color: 'white' }}>{orders.qty}</td>
+                    <td style={{ color: 'white' }}>{orders.harga}</td>
                   </tr>
                 ))}
               </tbody>
             </Table>
-            <h3>Total : {this.state.total}</h3>
-            <Button>Bayar</Button>
+            <h3 style={{ color: 'blue' }}>Total : {this.state.total}</h3>
+            <Button variant="contained" color="primary">
+              Bayar
+            </Button>
           </div>
         </center>
       </div>
